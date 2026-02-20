@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft Homepage</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Minecraftia', Arial, sans-serif;
+      background-image: url('https://m.media-amazon.com/images/I/71rzlQ2XMOL.jpg');
+      background-size: cover;
+      color: #e0e0ff;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom, #6db7ff, #a4d4ff 30%, #fef9c3 60%, #8bc34a 75%, #5d4037 100%);
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: url('https://i.imgur.com/8Z8Z8Z8.png') repeat;
+      opacity: 0.85;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin: 0;
+      color: #fff;
+      letter-spacing: 8px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .subtitle {
+      font-size: 2.2rem;
+      margin: 1rem 0 3rem;
+      color: #e0f7fa;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .btn {
+      padding: 1.2rem 3rem;
+      font-size: 1.8rem;
+      background: #4CAF50;
+      color: white;
+      border: 6px solid #388E3C;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 8px 0 #2E7D32;
+      transition: all 0.1s;
+      position: relative;
+      top: 0;
+    }
+
+    .btn:hover {
+      top: 4px;
+      box-shadow: 0 4px 0 #2E7D32;
+    }
+
+    .btn:active {
+      top: 8px;
+      box-shadow: none;
+      transform: translateY(4px);
+    }
+
+    @font-face {
+      font-family: 'Minecraftia';
+      src: url('https://cdn.jsdelivr.net/gh/jvalen/pixel-art-react@master/public/fonts/Minecraftia.ttf') format('truetype');
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1>MINECRAFT</h1>
+    <div class="subtitle">Explore • Build • Survive</div>
+
+    <div class="buttons">
+      <a href="#" class="btn">Play Now</a>
+      <a href="#" class="btn">Download</a>
+    </div>
+  </div>
+</body>
+</html>
