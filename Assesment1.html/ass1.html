@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Manager</title>
+    <link rel="stylesheet" href="ass1.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Marks Manager</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Add New Student</h2>
+                
+                <div class="input-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Enter full name">
+                </div>
+                
+                <div class="input-group">
+                    <label for="rollNo">Roll Number</label>
+                    <input type="text" id="rollNo" placeholder="Enter roll number">
+                </div>
+                
+                <div class="input-group">
+                    <label for="math">Math Marks (0-100)</label>
+                    <input type="number" id="math" placeholder="0" min="0" max="100">
+                </div>
+                
+                <div class="input-group">
+                    <label for="science">Science Marks (0-100)</label>
+                    <input type="number" id="science" placeholder="0" min="0" max="100">
+                </div>
+                
+                <div class="input-group">
+                    <label for="english">English Marks (0-100)</label>
+                    <input type="number" id="english" placeholder="0" min="0" max="100">
+                </div>
+                
+                <button onclick="addStudent()" class="btn-add">
+                    ➕ Add Student
+                </button>
+            </div>
+            
+            <div class="actions-section">
+                <h2>Actions</h2>
+                <div class="buttons-grid">
+                    <button onclick="displayAllStudents()" class="btn btn-display">
+                        Display All Students
+                    </button>
+                    
+                    <button onclick="calculateTotalMarks()" class="btn btn-total">
+                        Total Marks
+                    </button>
+                    
+                    <button onclick="calculateAverageMarks()" class="btn btn-avg">
+                        Average Marks
+                    </button>
+                    
+                    <button onclick="showHighAverage()" class="btn btn-high">
+                        Avg > 80
+                    </button>
+                    
+                    <button onclick="showFailedStudents()" class="btn btn-failed">
+                        Failed (Avg < 40)
+                    </button>
+                    
+                    <button onclick="countTotalStudents()" class="btn btn-count">
+                        Count Students
+                    </button>
+                </div>
+                
+                <div style="margin-top: 25px; text-align: center;">
+                    <button onclick="clearAllData()" 
+                            style="background:#d869b3bc; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer;">
+                        🗑️ Clear All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="output-section">
+            <h2 id="output-title">Results will appear here</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="ass1.js"></script>
+</body>
+</html>
